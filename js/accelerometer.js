@@ -20,9 +20,9 @@ $(document).ready(() => {
       z = Math.round(sensor.z*factor)/factor;
 
       //visualize sensor values in the file
-      xax.textContent(x);
-      yax.textContent(y);
-      zax.textContent(z);
+      xax.textContent = str(x);
+      yax.textContent = str(y);
+      zax.textContent = str(z);
 
       console.log("Acceleration along X-axis: " + sensor.x);
       console.log("Acceleration along Y-axis: " + sensor.y);
@@ -46,7 +46,7 @@ $(document).ready(() => {
       document.getElementById("errorType").textContent(event.error.name);
       document.getElementById("errorMessage").textContent(event.error.message);
     } */
-  }else document.getElementById("errorMessage").textContent("Accelerometer not supported");
+  }else document.getElementById("errorMessage").textContent = "Accelerometer not supported";
 
 
     /*setInterval(function(){
